@@ -13,6 +13,9 @@ class ContactsTableViewController: UITableViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var menuBarButtonItem: UIBarButtonItem!
     
+    // MARK: - Properties
+    var searchController: UISearchController?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +25,18 @@ class ContactsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // Setup menu button
         if self.revealViewController() != nil {
             menuBarButtonItem.target = self.revealViewController()
             menuBarButtonItem.action = #selector(SWRevealViewController.revealToggle(_:))
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        // Setup search controller
+        searchController = UISearchController(searchResultsController: nil)
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationItem.searchController = searchController
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,23 +48,26 @@ class ContactsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return ContactController.shared.contacts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactTableViewCell", for: indexPath) as? ContactTableViewCell else { return UITableViewCell() }
+        
+        let contact = ContactController.shared.contacts[indexPath.row]
+        
+        cell.contactNameLabel.text = contact.name
+        cell.contactImageView.image = UIImage(data: contact.photo!)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

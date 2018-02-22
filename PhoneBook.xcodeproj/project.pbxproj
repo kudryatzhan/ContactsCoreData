@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24F2A92203D061D00DD6A30 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24F2A91203D061D00DD6A30 /* ContactTableViewCell.swift */; };
 		B2E23218203CC19500B22692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E23217203CC19500B22692 /* AppDelegate.swift */; };
 		B2E2321D203CC19500B22692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E2321B203CC19500B22692 /* Main.storyboard */; };
 		B2E23220203CC19500B22692 /* PhoneBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2E2321E203CC19500B22692 /* PhoneBook.xcdatamodeld */; };
@@ -16,6 +17,7 @@
 		B2E2323B203CC19500B22692 /* PhoneBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E2323A203CC19500B22692 /* PhoneBookUITests.swift */; };
 		B2E2324C203CC5C500B22692 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E2324A203CC5C500B22692 /* SWRevealViewController.m */; };
 		B2E2324E203CC97800B22692 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E2324D203CC97800B22692 /* ContactsTableViewController.swift */; };
+		B2E23253203CEB6000B22692 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E23252203CEB6000B22692 /* ContactController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B24F2A91203D061D00DD6A30 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		B2E23214203CC19500B22692 /* PhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E23217203CC19500B22692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E2321C203CC19500B22692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		B2E2324A203CC5C500B22692 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		B2E2324B203CC5C500B22692 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		B2E2324D203CC97800B22692 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		B2E23252203CEB6000B22692 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B24F2A93203D062700DD6A30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B24F2A91203D061D00DD6A30 /* ContactTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B2E2320B203CC19500B22692 = {
 			isa = PBXGroup;
 			children = (
@@ -103,14 +115,12 @@
 		B2E23216203CC19500B22692 /* PhoneBook */ = {
 			isa = PBXGroup;
 			children = (
-				B2E23248203CC59700B22692 /* SWRevealViewController */,
-				B2E23217203CC19500B22692 /* AppDelegate.swift */,
+				B2E23251203CEB4300B22692 /* Model */,
+				B24F2A93203D062700DD6A30 /* View */,
+				B2E2324F203CDC3B00B22692 /* Controllers */,
 				B2E2321B203CC19500B22692 /* Main.storyboard */,
-				B2E23221203CC19500B22692 /* Assets.xcassets */,
-				B2E23223203CC19500B22692 /* LaunchScreen.storyboard */,
+				B2E23250203CDC4F00B22692 /* Supporting Files */,
 				B2E23226203CC19500B22692 /* Info.plist */,
-				B2E2321E203CC19500B22692 /* PhoneBook.xcdatamodeld */,
-				B2E2324D203CC97800B22692 /* ContactsTableViewController.swift */,
 			);
 			path = PhoneBook;
 			sourceTree = "<group>";
@@ -141,6 +151,34 @@
 				B2E23249203CC5C400B22692 /* PhoneBook-Bridging-Header.h */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		B2E2324F203CDC3B00B22692 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2E23248203CC59700B22692 /* SWRevealViewController */,
+				B2E2324D203CC97800B22692 /* ContactsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B2E23250203CDC4F00B22692 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2E23217203CC19500B22692 /* AppDelegate.swift */,
+				B2E23221203CC19500B22692 /* Assets.xcassets */,
+				B2E23223203CC19500B22692 /* LaunchScreen.storyboard */,
+				B2E2321E203CC19500B22692 /* PhoneBook.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2E23251203CEB4300B22692 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2E23252203CEB6000B22692 /* ContactController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24F2A92203D061D00DD6A30 /* ContactTableViewCell.swift in Sources */,
 				B2E23220203CC19500B22692 /* PhoneBook.xcdatamodeld in Sources */,
+				B2E23253203CEB6000B22692 /* ContactController.swift in Sources */,
 				B2E23218203CC19500B22692 /* AppDelegate.swift in Sources */,
 				B2E2324E203CC97800B22692 /* ContactsTableViewController.swift in Sources */,
 				B2E2324C203CC5C500B22692 /* SWRevealViewController.m in Sources */,
@@ -454,7 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PhoneBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PhoneBook/SWRevealViewController/PhoneBook-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoneBook/Controllers/SWRevealViewController/PhoneBook-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,7 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PhoneBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PhoneBook/SWRevealViewController/PhoneBook-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhoneBook/Controllers/SWRevealViewController/PhoneBook-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
