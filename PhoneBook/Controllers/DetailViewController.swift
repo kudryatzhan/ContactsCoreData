@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
+
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var contactImageView: UIImageView!
@@ -37,43 +37,106 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Personal Information"
+        } else {
+            return "Groups"
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        if section == 0 {
+            return 3
+        } else {
+            return 4
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch indexPath.row {
+        guard let contact = contact else { return UITableViewCell() }
+        
+        if indexPath.section == 0 {
+            switch indexPath.row {
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PhoneNumberTableViewCell.self), for: indexPath) as! PhoneNumberTableViewCell
+                
+                cell.phoneNumbeLabel.text = contact.phone
+                return cell
+                
+            case 1:
+                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EmailTableViewCell.self), for: indexPath) as! EmailTableViewCell
+                cell.emailLabel.text = contact.email
+                return cell
+                
+            case 2:
+                let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BirthdayTableViewCell.self), for: indexPath) as! BirthdayTableViewCell
+                
+                if let birthDate = contact.birthDate {
+                    cell.birthdayLabel.text = dateFormatter.string(from: birthDate)
+                }
+                return cell
+                
+            default:
+                fatalError()
+            }
+        } else {
+            // FIXME: - Fix it later
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCell", for: indexPath)
             
-        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PhoneNumberTableViewCell.self), for: indexPath) as! PhoneNumberTableViewCell
+            switch indexPath.row {
+            case 0:
+                cell.textLabel?.text = "None"
+    
+            case 1:
+                cell.textLabel?.text = "Friends"
+                
+            case 2:
+                cell.textLabel?.text = "People"
+                
+            case 3:
+                cell.textLabel?.text = "Animals"
+                
+            default:
+                fatalError()
+            }
             
-            cell.phoneNumbeLabel.text = contact?.phone
+            if Int(contact.group.rawValue) == indexPath.row {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
+            
             return cell
-            
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EmailTableViewCell.self), for: indexPath) as! EmailTableViewCell
-            cell.emailLabel.text = contact?.email
-            return cell
-            
-        case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BirthdayTableViewCell.self), for: indexPath) as! BirthdayTableViewCell
-            //FIXME: - FIX forced unwrapping later
-            cell.birthdayLabel.text = dateFormatter.string(from: contact!.birthDate!)
-            return cell
-            
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GroupTableViewCell.self), for: indexPath) as! GroupTableViewCell
-
-            cell.setupViews()
-            
-            return cell
-            
-        default:
-            return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 1 {
+            
+            switch indexPath.row {
+            case 0:
+                contact?.group = .none
+                
+            case 1:
+                contact?.group = .friends
+                
+            case 2:
+                contact?.group = .people
+                
+            case 3:
+                contact?.group = .animals
+                
+            default:
+                fatalError()
+            }
+        }
+        
+        tableView.reloadData()
     }
 }

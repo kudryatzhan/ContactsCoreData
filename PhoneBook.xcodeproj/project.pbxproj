@@ -13,8 +13,8 @@
 		B210EAA3203E4CFE0063B7BF /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210EAA2203E4CFE0063B7BF /* PhoneNumberTableViewCell.swift */; };
 		B210EAA5203E53C30063B7BF /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210EAA4203E53C30063B7BF /* EmailTableViewCell.swift */; };
 		B210EAA7203E550B0063B7BF /* BirthdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210EAA6203E550B0063B7BF /* BirthdayTableViewCell.swift */; };
-		B210EAA9203E56E10063B7BF /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210EAA8203E56E10063B7BF /* GroupTableViewCell.swift */; };
 		B24F2A92203D061D00DD6A30 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24F2A91203D061D00DD6A30 /* ContactTableViewCell.swift */; };
+		B27358EA203F6892001B84A0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27358E9203F6892001B84A0 /* MenuTableViewController.swift */; };
 		B2E23218203CC19500B22692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E23217203CC19500B22692 /* AppDelegate.swift */; };
 		B2E2321D203CC19500B22692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E2321B203CC19500B22692 /* Main.storyboard */; };
 		B2E23220203CC19500B22692 /* PhoneBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2E2321E203CC19500B22692 /* PhoneBook.xcdatamodeld */; };
@@ -51,8 +51,8 @@
 		B210EAA2203E4CFE0063B7BF /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
 		B210EAA4203E53C30063B7BF /* EmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
 		B210EAA6203E550B0063B7BF /* BirthdayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayTableViewCell.swift; sourceTree = "<group>"; };
-		B210EAA8203E56E10063B7BF /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		B24F2A91203D061D00DD6A30 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		B27358E9203F6892001B84A0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		B2E23214203CC19500B22692 /* PhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E23217203CC19500B22692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E2321C203CC19500B22692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,7 +105,6 @@
 				B210EAA2203E4CFE0063B7BF /* PhoneNumberTableViewCell.swift */,
 				B210EAA4203E53C30063B7BF /* EmailTableViewCell.swift */,
 				B210EAA6203E550B0063B7BF /* BirthdayTableViewCell.swift */,
-				B210EAA8203E56E10063B7BF /* GroupTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +176,7 @@
 				B2E23248203CC59700B22692 /* SWRevealViewController */,
 				B2E2324D203CC97800B22692 /* ContactsTableViewController.swift */,
 				B210EAA0203E4C3B0063B7BF /* DetailViewController.swift */,
+				B27358E9203F6892001B84A0 /* MenuTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -345,10 +345,10 @@
 				B210EA93203D54670063B7BF /* Helpers.swift in Sources */,
 				B2E23218203CC19500B22692 /* AppDelegate.swift in Sources */,
 				B2E2324E203CC97800B22692 /* ContactsTableViewController.swift in Sources */,
+				B27358EA203F6892001B84A0 /* MenuTableViewController.swift in Sources */,
 				B210EAA7203E550B0063B7BF /* BirthdayTableViewCell.swift in Sources */,
 				B210EAA3203E4CFE0063B7BF /* PhoneNumberTableViewCell.swift in Sources */,
 				B210EA91203D4EDE0063B7BF /* Contact+Extension.swift in Sources */,
-				B210EAA9203E56E10063B7BF /* GroupTableViewCell.swift in Sources */,
 				B2E2324C203CC5C500B22692 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,10 @@ import Foundation
 
 enum GroupType: Int16 {
     case none, friends, people, animals
+    
+    static var count: Int {
+        return GroupType.animals.hashValue + 1
+    }
 }
 
 extension Contact {
