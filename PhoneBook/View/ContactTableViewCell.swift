@@ -10,6 +10,13 @@ import UIKit
 
 class ContactTableViewCell: UITableViewCell {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var contactImageView: UIImageView!
     @IBOutlet weak var contactNameLabel: UILabel!
+    
+    func updateViews() {
+        contactImageView.contentMode = .scaleAspectFill
+        contactImageView.layer.cornerRadius = 32.0
+        contactImageView.clipsToBounds = true
+    }
 }

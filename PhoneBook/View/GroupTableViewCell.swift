@@ -10,15 +10,12 @@ import UIKit
 
 class GroupTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var groupSegmentedControl: UISegmentedControl!
+    
+    func setupViews() {
+        groupSegmentedControl.setTitle("None", forSegmentAt: 0)
+        groupSegmentedControl.setTitle("Friends", forSegmentAt: 1)
+        groupSegmentedControl.setTitle("People", forSegmentAt: 2)
+        groupSegmentedControl.setTitle("Animals", forSegmentAt: 3)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
