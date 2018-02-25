@@ -12,6 +12,8 @@ class MenuTableViewController: UITableViewController {
     
     let groups = ["All", "Friends", "People", "Animals"]
     
+    var lastSelectedCell: UITableViewCell?
+        
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groups.count
@@ -25,35 +27,16 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
     
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        let frontVC = revealViewController().frontViewController
-//        let contactsTableVC = storyboard?.instantiateViewController(withIdentifier: "ContactsTableViewController") as! ContactsTableViewController
-//
-//        switch indexPath.row {
-//        case 0:
-//            ContactController.shared.filteredContacts = []
-//            contactsTableVC.isGroupSelected = false
-//
-//        case 1:
-//            ContactController.shared.filterContacts(forGroup: .friends)
-//            contactsTableVC.isGroupSelected = true
-//
-//        case 2:
-//            ContactController.shared.filterContacts(forGroup: .people)
-//            contactsTableVC.isGroupSelected = true
-//
-//        case 3:
-//            ContactController.shared.filterContacts(forGroup: .animals)
-//            contactsTableVC.isGroupSelected = true
-//
-//        default:
-//            fatalError()
-//        }
-//
-//        revealViewController().pushFrontViewController(frontVC, animated: true)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        lastSelectedCell?.textLabel?.textColor = .black
+        lastSelectedCell?.backgroundColor = .white
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.textLabel?.textColor = .white
+        cell?.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        
+        lastSelectedCell = cell
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

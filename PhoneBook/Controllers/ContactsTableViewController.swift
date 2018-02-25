@@ -38,6 +38,7 @@ class ContactsTableViewController: UITableViewController, UISearchResultsUpdatin
         navigationItem.titleView = searchController.searchBar
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search contacts here"
     }
 
     // MARK: - Table view data source
@@ -58,8 +59,6 @@ class ContactsTableViewController: UITableViewController, UISearchResultsUpdatin
             }
         }
     }
-    
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

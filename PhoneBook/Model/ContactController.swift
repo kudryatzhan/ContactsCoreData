@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class ContactController {
     
@@ -18,9 +19,7 @@ class ContactController {
     var searchResults = [Contact]()
     var filteredContacts = [Contact]()
     
-    // Initializers
-    init() {
-        
+    func createMockData() {
         // Mock data
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let steveJobsImageData = UIImageJPEGRepresentation(UIImage(named: "steveJobsImage")!, 1.0),
@@ -42,7 +41,6 @@ class ContactController {
             if let date = Calendar.current.date(from: dateComponents) {
                 steveJobs.birthDate = date
             }
-            contacts.append(steveJobs)
             
             // Elon Musk
             let elonMusk = Contact(context: appDelegate.persistentContainer.viewContext)
@@ -58,7 +56,6 @@ class ContactController {
             if let date = Calendar.current.date(from: dateComponents) {
                 elonMusk.birthDate = date
             }
-            contacts.append(elonMusk)
             
             // Scooby Doo
             let scoobyDoo = Contact(context: appDelegate.persistentContainer.viewContext)
@@ -74,9 +71,9 @@ class ContactController {
             if let date = Calendar.current.date(from: dateComponents) {
                 elonMusk.birthDate = date
             }
-            contacts.append(scoobyDoo)
+            
+            contacts = [steveJobs, elonMusk, scoobyDoo]
         }
-        
     }
     
     func filterContacts(forGroup type: GroupType) {
@@ -86,5 +83,18 @@ class ContactController {
             }
             return false
         }
+    }
+    
+    func change(contact: Contact, toGroupType type: GroupType) {
+        contact.group = type
+        saveToPersistenceStore()
+    }
+    
+    
+    // Persistence
+    func saveToPersistenceStore() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.saveContext()
     }
 }

@@ -85,7 +85,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
                 fatalError()
             }
         } else {
-            // FIXME: - Fix it later
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCell", for: indexPath)
             
             switch indexPath.row {
@@ -117,20 +117,18 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        guard let contact = contact else { return }
         if indexPath.section == 1 {
             
             switch indexPath.row {
             case 0:
-                contact?.group = .none
-                
+                ContactController.shared.change(contact: contact, toGroupType: .none)
             case 1:
-                contact?.group = .friends
-                
+                ContactController.shared.change(contact: contact, toGroupType: .friends)
             case 2:
-                contact?.group = .people
-                
+                ContactController.shared.change(contact: contact, toGroupType: .people)
             case 3:
-                contact?.group = .animals
+                ContactController.shared.change(contact: contact, toGroupType: .animals)
                 
             default:
                 fatalError()
