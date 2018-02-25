@@ -13,7 +13,13 @@ class MenuTableViewController: UITableViewController {
     let groups = ["All", "Friends", "People", "Animals"]
     
     var lastSelectedCell: UITableViewCell?
-        
+    
+    
+    @IBAction func aboutButtonPressed(_ sender: UIButton) {
+        lastSelectedCell?.textLabel?.textColor = .black
+        lastSelectedCell?.backgroundColor = .white
+    }
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groups.count
@@ -40,11 +46,11 @@ class MenuTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destinationNavController = segue.destination as! UINavigationController
-        let contactsVC = destinationNavController.topViewController as! ContactsTableViewController
-        
         if segue.identifier == "showContactsVC",
             let indexPath = tableView.indexPathForSelectedRow {
+            
+            let destinationNavController = segue.destination as! UINavigationController
+            let contactsVC = destinationNavController.topViewController as! ContactsTableViewController
             
             contactsVC.menuBarButtonItem.target = self.revealViewController()
             contactsVC.menuBarButtonItem.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -71,7 +77,6 @@ class MenuTableViewController: UITableViewController {
             default:
                 fatalError()
             }
-            
         }
     }
 }

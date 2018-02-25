@@ -15,6 +15,7 @@
 		B210EAA7203E550B0063B7BF /* BirthdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210EAA6203E550B0063B7BF /* BirthdayTableViewCell.swift */; };
 		B24F2A92203D061D00DD6A30 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24F2A91203D061D00DD6A30 /* ContactTableViewCell.swift */; };
 		B27358EA203F6892001B84A0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27358E9203F6892001B84A0 /* MenuTableViewController.swift */; };
+		B27358EC20428CD5001B84A0 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27358EB20428CD5001B84A0 /* AboutTableViewController.swift */; };
 		B2E23218203CC19500B22692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E23217203CC19500B22692 /* AppDelegate.swift */; };
 		B2E2321D203CC19500B22692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E2321B203CC19500B22692 /* Main.storyboard */; };
 		B2E23220203CC19500B22692 /* PhoneBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2E2321E203CC19500B22692 /* PhoneBook.xcdatamodeld */; };
@@ -53,6 +54,7 @@
 		B210EAA6203E550B0063B7BF /* BirthdayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayTableViewCell.swift; sourceTree = "<group>"; };
 		B24F2A91203D061D00DD6A30 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		B27358E9203F6892001B84A0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		B27358EB20428CD5001B84A0 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		B2E23214203CC19500B22692 /* PhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E23217203CC19500B22692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E2321C203CC19500B22692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				B2E2324D203CC97800B22692 /* ContactsTableViewController.swift */,
 				B210EAA0203E4C3B0063B7BF /* DetailViewController.swift */,
 				B27358E9203F6892001B84A0 /* MenuTableViewController.swift */,
+				B27358EB20428CD5001B84A0 /* AboutTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				B27358EA203F6892001B84A0 /* MenuTableViewController.swift in Sources */,
 				B210EAA7203E550B0063B7BF /* BirthdayTableViewCell.swift in Sources */,
 				B210EAA3203E4CFE0063B7BF /* PhoneNumberTableViewCell.swift in Sources */,
+				B27358EC20428CD5001B84A0 /* AboutTableViewController.swift in Sources */,
 				B210EA91203D4EDE0063B7BF /* Contact+Extension.swift in Sources */,
 				B2E2324C203CC5C500B22692 /* SWRevealViewController.m in Sources */,
 			);
