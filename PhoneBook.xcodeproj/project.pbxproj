@@ -196,8 +196,8 @@
 		B2E23251203CEB4300B22692 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2E23252203CEB6000B22692 /* ContactController.swift */,
 				B210EA90203D4EDE0063B7BF /* Contact+Extension.swift */,
+				B2E23252203CEB6000B22692 /* ContactController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

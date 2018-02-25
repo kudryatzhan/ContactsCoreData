@@ -15,6 +15,8 @@ class ContactController {
     
     // MARK: - Properties
     var contacts = [Contact]()
+    var searchResults = [Contact]()
+    var filteredContacts = [Contact]()
     
     // Initializers
     init() {
@@ -22,7 +24,8 @@ class ContactController {
         // Mock data
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let steveJobsImageData = UIImageJPEGRepresentation(UIImage(named: "steveJobsImage")!, 1.0),
-            let elonMuskImageData = UIImageJPEGRepresentation(UIImage(named: "elonMuskImage")!, 1.0) {
+            let elonMuskImageData = UIImageJPEGRepresentation(UIImage(named: "elonMuskImage")!, 1.0),
+            let scoobyDoImageData = UIImageJPEGRepresentation(UIImage(named: "scoobyDooImage")!, 1.0) {
             
             // Steve Jobs
             let steveJobs = Contact(context: appDelegate.persistentContainer.viewContext)
@@ -56,7 +59,32 @@ class ContactController {
                 elonMusk.birthDate = date
             }
             contacts.append(elonMusk)
+            
+            // Scooby Doo
+            let scoobyDoo = Contact(context: appDelegate.persistentContainer.viewContext)
+            scoobyDoo.name = "Scooby Doo"
+            scoobyDoo.email = "scooby.doo@cartoon.com"
+            scoobyDoo.group = .animals
+            scoobyDoo.photo = scoobyDoImageData
+            scoobyDoo.phone = "N/A"
+            
+            dateComponents.year = 2002
+            dateComponents.month = 6
+            dateComponents.day = 8
+            if let date = Calendar.current.date(from: dateComponents) {
+                elonMusk.birthDate = date
+            }
+            contacts.append(scoobyDoo)
         }
         
+    }
+    
+    func filterContacts(forGroup type: GroupType) {
+        filteredContacts = contacts.filter { (contact) -> Bool in
+            if contact.group == type {
+                return true
+            }
+            return false
+        }
     }
 }
