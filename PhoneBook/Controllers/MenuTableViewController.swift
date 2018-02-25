@@ -10,7 +10,10 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
     
-    let groups = ["All", "Friends", "People", "Animals"]
+    let groups = [NSLocalizedString("All", comment: ""),
+                  NSLocalizedString("Friends", comment: ""),
+                  NSLocalizedString("People", comment: ""),
+                  NSLocalizedString("Animals", comment: "")]
     
     var lastSelectedCell: UITableViewCell?
     

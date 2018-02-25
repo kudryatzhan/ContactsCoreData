@@ -38,7 +38,7 @@ class ContactsTableViewController: UITableViewController, UISearchResultsUpdatin
         navigationItem.titleView = searchController.searchBar
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search contacts here"
+        searchController.searchBar.placeholder = NSLocalizedString("Search contacts here", comment: "Search bar placeholder")
     }
 
     // MARK: - Table view data source

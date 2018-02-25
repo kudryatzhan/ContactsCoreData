@@ -51,11 +51,11 @@ class AboutTableViewController: UITableViewController {
             
             switch indexPath.row {
             case 0:
-                cell.textLabel?.text = "Name"
+                cell.textLabel?.text = NSLocalizedString("Name", comment: "")
                 cell.detailTextLabel?.text = Bundle.main.infoDictionary?["CFBundleName"] as? String
                 
             case 1:
-                cell.textLabel?.text = "Version"
+                cell.textLabel?.text = NSLocalizedString("Version", comment: "")
                 cell.detailTextLabel?.text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
                 
             default:
@@ -67,9 +67,9 @@ class AboutTableViewController: UITableViewController {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath)
             
-            cell.textLabel?.text = "Description"
+            cell.textLabel?.text = NSLocalizedString("Description", comment: "")
             
-            cell.detailTextLabel?.text = "This app is a simple version for Apple's contacts. Created only for job application."
+            cell.detailTextLabel?.text = NSLocalizedString("This app is a simple version for Apple's contacts. Created only for job application.", comment: "")
             cell.detailTextLabel?.numberOfLines = 0
             cell.detailTextLabel?.lineBreakMode = .byWordWrapping
             

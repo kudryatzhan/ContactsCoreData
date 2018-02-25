@@ -1,0 +1,57 @@
+
+/* Class = "UIBarButtonItem"; title = "Groups"; ObjectID = "0ld-ea-Qc2"; */
+"0ld-ea-Qc2.title" = "Groups";
+
+/* Class = "UILabel"; text = "(Name)"; ObjectID = "2Mj-3L-Ok2"; */
+"2Mj-3L-Ok2.text" = "(Name)";
+
+/* Class = "UINavigationItem"; title = "Contacts"; ObjectID = "3IM-55-qPR"; */
+"3IM-55-qPR.title" = "Contacts";
+
+/* Class = "UILabel"; text = "email@mail.com"; ObjectID = "EdR-Xp-JMj"; */
+"EdR-Xp-JMj.text" = "email@mail.com";
+
+/* Class = "UILabel"; text = "phone number"; ObjectID = "IEa-Ry-cXP"; */
+"IEa-Ry-cXP.text" = "phone number";
+
+/* Class = "UILabel"; text = "+7 (777) 777 77 77"; ObjectID = "JfG-Xh-3wc"; */
+"JfG-Xh-3wc.text" = "+7 (777) 777 77 77";
+
+/* Class = "UILabel"; text = "January 11, 2018"; ObjectID = "QTW-vk-ysN"; */
+"QTW-vk-ysN.text" = "January 11, 2018";
+
+/* Class = "UILabel"; text = "birthday"; ObjectID = "QmE-Jh-Aj6"; */
+"QmE-Jh-Aj6.text" = "birthday";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "X7n-Ke-5r0"; */
+"X7n-Ke-5r0.text" = "Subtitle";
+
+/* Class = "UIButton"; normalTitle = "About this app"; ObjectID = "cMh-d7-EK2"; */
+"cMh-d7-EK2.normalTitle" = "About this app";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "eA3-mh-JYE"; */
+"eA3-mh-JYE.text" = "Title";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "hQ1-l4-fsD"; */
+"hQ1-l4-fsD.text" = "Title";
+
+/* Class = "UILabel"; text = "(Name)"; ObjectID = "lN9-Db-JH6"; */
+"lN9-Db-JH6.text" = "(Name)";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "o8y-u2-b4d"; */
+"o8y-u2-b4d.title" = "About";
+
+/* Class = "UIBarButtonItem"; title = "Groups"; ObjectID = "ocG-Z5-G3P"; */
+"ocG-Z5-G3P.title" = "Groups";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "vLI-ag-2bn"; */
+"vLI-ag-2bn.text" = "Title";
+
+/* Class = "UILabel"; text = "email"; ObjectID = "vZ6-bT-vGy"; */
+"vZ6-bT-vGy.text" = "email";
+
+/* Class = "UILabel"; text = "(type)"; ObjectID = "wxn-MT-wRX"; */
+"wxn-MT-wRX.text" = "(type)";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "x5J-22-IN6"; */
+"x5J-22-IN6.text" = "Detail";

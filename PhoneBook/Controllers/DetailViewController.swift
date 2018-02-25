@@ -42,9 +42,9 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Personal Information"
+            return NSLocalizedString("Personal Information", comment: "Personal information header title")
         } else {
-            return "Groups"
+            return NSLocalizedString("Groups", comment: "Groups header title")
         }
     }
     
@@ -90,16 +90,16 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             
             switch indexPath.row {
             case 0:
-                cell.textLabel?.text = "None"
+                cell.textLabel?.text = NSLocalizedString("None", comment: "")
     
             case 1:
-                cell.textLabel?.text = "Friends"
+                cell.textLabel?.text = NSLocalizedString("Friends", comment: "")
                 
             case 2:
-                cell.textLabel?.text = "People"
+                cell.textLabel?.text = NSLocalizedString("People", comment: "")
                 
             case 3:
-                cell.textLabel?.text = "Animals"
+                cell.textLabel?.text = NSLocalizedString("Animals", comment: "")
                 
             default:
                 fatalError()
